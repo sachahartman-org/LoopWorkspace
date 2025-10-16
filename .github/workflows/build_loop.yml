@@ -302,10 +302,13 @@ jobs:
           remote_window
 
           # the final customization listed above CANNOT have a continuation character
-          # more customizations can be pasted after this line          negative_insulin
-
-          # the final customization listed above CANNOT have a continuation character
           # more customizations can be pasted after this line
+          
+          # Module: Loop File: Loop/LoopCore/LoopCoreConstants.swift adjusted DefaultAbsorptionTimes
+          curl https://github.com/sachahartman-org/Loop/commit/16c5e5e7418df15538e69c02e7138a1a363bbfdd.patch | git apply -v --directory=Loop
+
+          # Module: Loopkit File: Loopkit/LoopkitUI/CarbKit/FoodEmojiDataSource.swift added emoji and changed absorption times
+          curl https://github.com/sachahartman-org/Loopkit/commit/c4092abb6fd22f6bd7f3395ade16742368b81c33.patch | git apply -v --directory=Loopkit
           
       # Patch Fastlane Match to not print tables
       - name: Patch Match Tables
