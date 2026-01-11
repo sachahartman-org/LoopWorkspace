@@ -220,10 +220,9 @@ jobs:
           now_line \
           lnl_icon \
           watch_title \
-          meal_week \
+          meal_days \
           profiles \
           basal_lock \
-          live_activity \
           negative_insulin \
           remote_window
 
